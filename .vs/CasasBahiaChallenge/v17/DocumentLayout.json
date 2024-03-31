@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\git\\CasasBahiaChallenge\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\controller\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\controller\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\service\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\service\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\service\\interface\\iprodutoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\service\\interface\\iprodutoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\repository\\interface\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\repository\\interface\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\repository\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\repository\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\dtos\\produtodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\dtos\\produtodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\model\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\model\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\dtos\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\dtos\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|c:\\git\\casasbahiachallenge\\src\\casasbahia.api\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7C28E4-9852-439E-96A2-B2F924B0BD89}|src\\CasasBahia.Api\\CasasBahia.Api.csproj|solutionrelative:src\\casasbahia.api\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IProdutoRepository.cs",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Repository\\Interface\\IProdutoRepository.cs",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\Repository\\Interface\\IProdutoRepository.cs",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Repository\\Interface\\IProdutoRepository.cs",
+              "RelativeToolTip": "src\\CasasBahia.Api\\Repository\\Interface\\IProdutoRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T20:50:42.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProdutoService.cs",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Service\\ProdutoService.cs",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\Service\\ProdutoService.cs",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Service\\ProdutoService.cs",
+              "RelativeToolTip": "src\\CasasBahia.Api\\Service\\ProdutoService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T20:41:45.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\Program.cs",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Program.cs",
+              "RelativeToolTip": "src\\CasasBahia.Api\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T20:37:15.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProdutoService.cs",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Service\\Interface\\IProdutoService.cs",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\Service\\Interface\\IProdutoService.cs",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Service\\Interface\\IProdutoService.cs",
+              "RelativeToolTip": "src\\CasasBahia.Api\\Service\\Interface\\IProdutoService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T20:31:26.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Repository\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\Repository\\ProdutoRepository.cs",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Repository\\ProdutoRepository.cs",
+              "RelativeToolTip": "src\\CasasBahia.Api\\Repository\\ProdutoRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T20:15:04.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Controller\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\Controller\\ProdutoController.cs",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Controller\\ProdutoController.cs",
+              "RelativeToolTip": "src\\CasasBahia.Api\\Controller\\ProdutoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T20:17:58.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\appsettings.json",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\appsettings.json",
+              "RelativeToolTip": "src\\CasasBahia.Api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-30T20:40:42.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProdutoDTO.cs",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\DTOs\\ProdutoDTO.cs",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\DTOs\\ProdutoDTO.cs",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\DTOs\\ProdutoDTO.cs",
+              "RelativeToolTip": "src\\CasasBahia.Api\\DTOs\\ProdutoDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T20:33:15.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Model\\Produto.cs",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\Model\\Produto.cs",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Model\\Produto.cs",
+              "RelativeToolTip": "src\\CasasBahia.Api\\Model\\Produto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T20:34:47.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\DTOs\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\DTOs\\MappingProfiles.cs",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\DTOs\\MappingProfiles.cs",
+              "RelativeToolTip": "src\\CasasBahia.Api\\DTOs\\MappingProfiles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T20:33:38.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\CasasBahia.Api\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\git\\CasasBahiaChallenge\\src\\CasasBahia.Api\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "src\\CasasBahia.Api\\Context\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T20:16:23.717Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
