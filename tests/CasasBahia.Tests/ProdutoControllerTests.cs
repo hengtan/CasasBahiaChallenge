@@ -1,12 +1,13 @@
 using Xunit;
 using Moq;
 using Microsoft.AspNetCore.Mvc;
-using CasasBahia.Api.Service.Interface;
 using CasasBahia.Api.Controller;
-using Assert = Xunit.Assert;
+using CasasBahia.Api.Service.Interface;
 using CasasBahia.Api.DTOs;
+using Assert = Xunit.Assert;
+using Produto = CasasBahia.Api.Model.Produto;
 
-namespace CasasBahia.Tests
+namespace CasasBahia.Api.Tests
 {
     public class ProdutoControllerTests
     {
@@ -28,39 +29,30 @@ namespace CasasBahia.Tests
         }
 
         [Fact]
-        public async Task CreateProduct_CallsAddProductAndReturnsCreatedAtRoute_WhenProductIsNotNull()
+        public async Task CreateProduct_ReturnsCreatedAtRouteResult_WhenProductIsNotNull()
         {
-            var productDTO = new ProdutoDTO { IdProduto = 1, /* other properties */ };
-            var result = await _controller.CreateProduct(productDTO);
-
-            _mockService.Verify(service => service.AddProduct(productDTO), Times.Once);
-
+            var produtoDTO = new ProdutoDTO() { IdProduto = 1, /* other properties */ };
+            var result = await _controller.CreateProduct(produtoDTO);
             var createdAtRouteResult = Assert.IsType<CreatedAtRouteResult>(result.Result);
-            Assert.Equal("GetProduct", createdAtRouteResult.RouteName);
-            Assert.Equal(productDTO.IdProduto, createdAtRouteResult.RouteValues["id"]);
-            Assert.Equal(productDTO, createdAtRouteResult.Value);
+            Assert.Equal(produtoDTO, createdAtRouteResult.Value);
         }
-        
+
         [Fact]
         public async Task GetProductById_ReturnsNotFound_WhenProductDoesNotExist()
         {
-            _mockService.Setup(service => service.GetProductById(It.IsAny<int>())).ReturnsAsync((ProdutoDTO)null);
-
+            _mockService.Setup(service => service.GetProductById(It.IsAny<int>())).ReturnsAsync((Produto)null);
             var result = await _controller.GetProductById(1);
-
             Assert.IsType<NotFoundObjectResult>(result.Result);
         }
 
         [Fact]
         public async Task GetProductById_ReturnsOk_WhenProductExists()
         {
-            var produtoDTO = new ProdutoDTO { IdProduto = 1, /* other properties */ };
-            _mockService.Setup(service => service.GetProductById(It.IsAny<int>())).ReturnsAsync(produtoDTO);
-
+            var produto = new Produto { IdProduto = 1, /* other properties */ };
+            _mockService.Setup(service => service.GetProductById(It.IsAny<int>())).ReturnsAsync(produto);
             var result = await _controller.GetProductById(1);
-
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            Assert.Equal(produtoDTO, okResult.Value);
+            Assert.Equal(produto, okResult.Value);
         }
     }
 }

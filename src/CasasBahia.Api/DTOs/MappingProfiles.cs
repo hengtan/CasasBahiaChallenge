@@ -7,7 +7,7 @@ namespace CasasBahia.Api.DTOs
     {
         public MappingProfiles()
         {
-            CreateMap<Produto, ProdutoDTO>().ReverseMap();
+            CreateMap<ProdutoDTO, Produto>().ReverseMap();
         }
     }
 }

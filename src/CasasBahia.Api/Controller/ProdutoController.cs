@@ -1,4 +1,5 @@
 ﻿using CasasBahia.Api.DTOs;
+using CasasBahia.Api.Model;
 using CasasBahia.Api.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,31 +7,41 @@ namespace CasasBahia.Api.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProdutoController(IProdutoService productService) : ControllerBase
+    public class ProdutoController : ControllerBase
     {
-        private readonly IProdutoService _produtoService = productService;
+        private readonly IProdutoService _produtoService;
+
+        public ProdutoController(IProdutoService productService)
+        {
+            _produtoService = productService;
+        }
 
         [HttpPost]
-        public async Task<ActionResult<ProdutoDTO>> CreateProduct(ProdutoDTO productDTO)
+        public async Task<ActionResult<Produto>> CreateProduct(ProdutoDTO produtoDTO)
         {
-            if (productDTO == null)
+            if (!IsValidProduct(produtoDTO))
                 return BadRequest("Product is null");
 
-            await _produtoService.AddProduct(productDTO);
+            await _produtoService.AddProduct(produtoDTO);
 
-            return CreatedAtRoute("GetProduct", new { id = productDTO.IdProduto },
-                               productDTO);
+            return CreatedAtRoute("GetProduct", new { id = produtoDTO.IdProduto },
+                produtoDTO);
+        }
+
+        private bool IsValidProduct(ProdutoDTO produtoDTO)
+        {
+            return produtoDTO != null;
         }
 
         [HttpGet("{id:int}", Name = "GetProduct")]
-        public async Task<ActionResult<ProdutoDTO>> GetProductById(int id)
+        public async Task<ActionResult<Produto>> GetProductById(int id)
         {
-            var productDTO = await _produtoService.GetProductById(id);
+            var produto = await _produtoService.GetProductById(id);
 
-            if (productDTO == null)
+            if (produto == null)
                 return NotFound("Product not found");
 
-            return Ok(productDTO);
+            return Ok(produto);
         }
     }
 }

@@ -1,30 +1,26 @@
 using CasasBahia.Api.Service.Interface;
 using Confluent.Kafka;
-using Microsoft.Extensions.Configuration;
 
 namespace CasasBahia.Api.Service
 {
-    public class KafkaProducerService : IKafkaProducerService
+    public class KafkaProducerService(IProducer<Null, string> producer) : IKafkaProducerService
     {
-        private readonly IProducer<Null, string> _producer;
-
-        public KafkaProducerService(IConfiguration configuration)
-        {
-            var config = new ProducerConfig { BootstrapServers = configuration.GetConnectionString("KafkaBootstrapServers") };
-            _producer = new ProducerBuilder<Null, string>(config).Build();
-        }
-
         public async Task ProduceAsync(string topic, string message)
         {
             try
             {
-                var messageResult = await _producer.ProduceAsync(topic, new Message<Null, string> { Value = message });
-                Console.WriteLine($"Message {messageResult.Value} sent to {messageResult.TopicPartitionOffset}");
+                var messageResult = await producer.ProduceAsync(topic, new Message<Null, string> { Value = message });
+                LogMessageResult(messageResult);
             }
             catch (ProduceException<Null, string> e)
             {
                 Console.WriteLine($"Delivery failed: {e.Error.Reason}");
             }
+        }
+
+        private void LogMessageResult(DeliveryResult<Null, string> messageResult)
+        {
+            Console.WriteLine($"Message {messageResult.Value} sent to {messageResult.TopicPartitionOffset}");
         }
     }
 }

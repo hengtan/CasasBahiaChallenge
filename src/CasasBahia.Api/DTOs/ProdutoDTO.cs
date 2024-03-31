@@ -10,7 +10,7 @@ namespace CasasBahia.Api.DTOs
 
         [Required(ErrorMessage = "Campo Nome é obrigatório")]
         [MaxLength(100)]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [Required(ErrorMessage = "Campo Preço é obrigatório")]
         public decimal Preco { get; set; }

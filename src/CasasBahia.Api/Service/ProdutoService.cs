@@ -3,7 +3,6 @@ using CasasBahia.Api.DTOs;
 using CasasBahia.Api.Model;
 using CasasBahia.Api.Repository.Interface;
 using CasasBahia.Api.Service.Interface;
-using Confluent.Kafka;
 using Newtonsoft.Json;
 
 namespace CasasBahia.Api.Service
@@ -16,23 +15,32 @@ namespace CasasBahia.Api.Service
         private readonly string _topic = "Estoque";
 
         public ProdutoService(IProdutoRepository produtoRepository,
-                                                IMapper mapper,
-                                                IKafkaProducerService kafkaProducerService)
+                              IMapper mapper,
+                              IKafkaProducerService kafkaProducerService)
         {
             _produtoRepository = produtoRepository;
             _mapper = mapper;
             _kafkaProducerService = kafkaProducerService;
         }
 
-        public async Task AddProduct(ProdutoDTO produtoDTO)
+        public async Task<IEnumerable<Produto>> GetProducts()
+        {
+            var productsEntity = await _produtoRepository.GetAll();
+            return _mapper.Map<IEnumerable<Produto>>(productsEntity);
+        }
+
+        public async Task<Produto> GetProductById(int id)
+        {
+            var productEntity = await _produtoRepository.GetProdutoById(id);
+            return _mapper.Map<Produto>(productEntity);
+        }
+        
+        public async Task<Produto> AddProduct(ProdutoDTO  produtoDTO)
         {
             var productEntity = _mapper.Map<Produto>(produtoDTO);
-            await _produtoRepository.Create(productEntity);
-            produtoDTO.IdProduto = productEntity.IdProduto;
-            
-            string productJson = JsonConvert.SerializeObject(produtoDTO);
-            await _kafkaProducerService.ProduceAsync(_topic, 
-                productJson);
+            var produto = await _produtoRepository.Create(productEntity);
+            await SendProductToKafka(produto);
+            return produto;
         }
 
         public async Task DeleteProduct(int id)
@@ -50,16 +58,10 @@ namespace CasasBahia.Api.Service
             await _produtoRepository.Update(productEntity);
         }
 
-        public async Task<IEnumerable<ProdutoDTO>> GetProducts()
+        private async Task SendProductToKafka(Produto produto)
         {
-            var productsEntity = await _produtoRepository.GetAll();
-            return _mapper.Map<IEnumerable<ProdutoDTO>>(productsEntity);
-        }
-
-        public async Task<ProdutoDTO> GetProductById(int id)
-        {
-            var productEntity = await _produtoRepository.GetProdutoById(id);
-            return _mapper.Map<ProdutoDTO>(productEntity);
+            string productJson = JsonConvert.SerializeObject(produto);
+            await _kafkaProducerService.ProduceAsync(_topic, productJson);
         }
     }
 }

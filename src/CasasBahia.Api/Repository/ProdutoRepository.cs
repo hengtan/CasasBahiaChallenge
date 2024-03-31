@@ -5,9 +5,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CasasBahia.Api.Repository
 {
-    public class ProdutoRepository(AppDbContext context) : IProdutoRepository
+    public class ProdutoRepository : IProdutoRepository
     {
-        private readonly AppDbContext _context = context;
+        private readonly AppDbContext _context;
+
+        public ProdutoRepository(AppDbContext context)
+        {
+            _context = context;
+        }
 
         public async Task<IEnumerable<Produto>> GetAll()
         {
@@ -18,7 +23,7 @@ namespace CasasBahia.Api.Repository
         {
             return await _context.Produtos
                 .Where(predicate: p => p.IdProduto == id)
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync() ?? throw new InvalidOperationException();
         }
 
         public async Task<Produto> Create(Produto Produto)
@@ -37,10 +42,13 @@ namespace CasasBahia.Api.Repository
 
         public async Task<Produto> Delete(int id)
         {
-            var Produto = await GetProdutoById(id);
-            _context.Produtos.Remove(Produto);
-            await _context.SaveChangesAsync();
-            return Produto;
+            var produto = await GetProdutoById(id);
+            if (produto != null)
+            {
+                _context.Produtos.Remove(produto);
+                await _context.SaveChangesAsync();
+            }
+            return produto;
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.Text.Json.Serialization;
 
 namespace CasasBahia.Api.Model
 {
@@ -7,7 +6,7 @@ namespace CasasBahia.Api.Model
     {
         public int IdProduto { get; set; }
 
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         public decimal Preco { get; set; }
 
