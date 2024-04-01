@@ -7,28 +7,21 @@ namespace CasasBahia.Api.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProdutoController : ControllerBase
+    public class ProdutoController(IProdutoService productService) : ControllerBase
     {
-        private readonly IProdutoService _produtoService;
-
-        public ProdutoController(IProdutoService productService)
-        {
-            _produtoService = productService;
-        }
-
         [HttpPost]
         public async Task<ActionResult<Produto>> CreateProduct(ProdutoDTO produtoDTO)
         {
             if (!IsValidProduct(produtoDTO))
-                return BadRequest("Product is null");
+                return BadRequest(
+                    "Não foi possível criar o produto. Verifique os dados informados.");
 
-            await _produtoService.AddProduct(produtoDTO);
+            var response = await productService.AddProduct(produtoDTO);
 
-            return CreatedAtRoute("GetProduct", new { id = produtoDTO.IdProduto },
-                produtoDTO);
+            return Ok(response);
         }
 
-        private bool IsValidProduct(ProdutoDTO produtoDTO)
+        private static bool IsValidProduct(ProdutoDTO produtoDTO)
         {
             return produtoDTO != null;
         }
@@ -36,10 +29,10 @@ namespace CasasBahia.Api.Controller
         [HttpGet("{id:int}", Name = "GetProduct")]
         public async Task<ActionResult<Produto>> GetProductById(int id)
         {
-            var produto = await _produtoService.GetProductById(id);
+            var produto = await productService.GetProductById(id);
 
-            if (produto == null)
-                return NotFound("Product not found");
+            if (produto is null)
+                return NotFound("Não foi possível encontrar o produto. Verifique o ID informado.");
 
             return Ok(produto);
         }

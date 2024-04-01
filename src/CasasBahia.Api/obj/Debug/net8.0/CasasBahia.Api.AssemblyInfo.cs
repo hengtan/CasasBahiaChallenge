@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CasasBahia.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9efa963d529764b0ebcac7e36178d3ed86a41b72")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CasasBahia.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CasasBahia.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
